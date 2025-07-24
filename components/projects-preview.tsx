@@ -10,16 +10,37 @@ const featuredProjects = [
   {
     title: "Sistema Municipal Villa Esperanza",
     description: "Sistema de votación ciudadana para la administración pública.",
-    image: "/villaesperanza.png", // asegúrate que esté en /public
+    image: "/villaesperanza.png",
     tech: ["Next.js", "Tailwind CSS", "Vercel"],
     demo: "https://v0-simulated-budget-system.vercel.app"
   },
   {
     title: "Sistema Institucional ISIPP",
     description: "Portal educativo para gestión académica y comunicación institucional.",
-    image: "/isipp.png", // poné esta imagen también en /public
+    image: "/isipp.png",
     tech: ["Next.js", "Tailwind CSS", "Vercel"],
-    demo: "https://isippweb.vercel.app" // reemplazalo si usás otro link
+    demo: "https://isippweb.vercel.app"
+  },
+  {
+    title: "IA ANALISIS DEL COMPARTAMIENTO DE TUS IA'S",
+    description: "Sistema IA que interpreta el uso y potencial de la IA Generativa.",
+    image: "/projectia2.png",
+    tech: ["Next.js", "OpenAI", "Tailwind CSS"],
+    demo: "https://ia-ai-flame.vercel.app"
+  },
+  {
+    title: "SOMA ai ",
+    description: "IA con personalidad que analiza y responde sueños humanos.",
+    image: "/projectia.jpg",
+    tech: ["Next.js", "OpenAI", "Framer Motion"],
+    demo: "https://soma-ia.vercel.app"
+  },
+  {
+    title: "Landing Empresarial Grúas Torres",
+    description: "Sitio institucional para empresa de servicios industriales y rurales.",
+    image: "/placeholder-logo.png",
+    tech: ["Next.js", "Tailwind CSS", "Vercel"],
+    demo: "https://gruastorres.vercel.app"
   }
 ]
 
@@ -42,7 +63,7 @@ export function ProjectsPreview() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {featuredProjects.map((project, index) => (
             <motion.a
               key={index}
@@ -60,8 +81,8 @@ export function ProjectsPreview() {
                 <Image
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
-                  width={300}
-                  height={200}
+                  width={500}
+                  height={300}
                   className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-gray-900/80 to-transparent" />
