@@ -7,19 +7,19 @@ const socialLinks = [
   {
     name: "GitHub",
     icon: Github,
-    href: "https://github.com/agustintorres",
+    href: "https://github.com/Gabrieltorres28",
     color: "hover:text-gray-300",
   },
   {
     name: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com/in/agustintorres",
+    href: "https://www.linkedin.com/in/gabriel-torres-4b652a284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     color: "hover:text-blue-400",
   },
   {
     name: "Instagram",
     icon: Instagram,
-    href: "https://instagram.com/agustintorres",
+    href: "https://instagram.com/agust1n.exe",
     color: "hover:text-pink-400",
   },
 ]
