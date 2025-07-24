@@ -27,7 +27,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
     >
       <div className="relative overflow-hidden">
         <Image
-          src={project.image || "/placeholder.svg"}
+          src={project.image || "public/projectia.svg"}
           alt={project.title}
           width={500}
           height={300}

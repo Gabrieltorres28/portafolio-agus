@@ -35,7 +35,7 @@ export function ProjectsPreview() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Featured Projects
+            Trabajando, focusing.
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Una muestra de mis proyectos más destacados en producción real.
