@@ -71,16 +71,21 @@ export function HeroSection() {
           </Button>
 
           <Button
-            variant="outline"
-            size="lg"
-            asChild
-            className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 text-lg bg-transparent"
-          >
-            <a href="/cv/agustin_torres_cv.pdf" download>
-              <Download className="mr-2 w-5 h-5" />
-              Download CV
-            </a>
-          </Button>
+  variant="outline"
+  size="lg"
+  asChild
+  className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 text-lg bg-transparent"
+>
+  <a
+    href="/CV_Gabriel_Torres_Analista_Sistemas.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Download className="mr-2 w-5 h-5" />
+    Ver CV
+  </a>
+</Button>
+
         </motion.div>
 
         <motion.div
