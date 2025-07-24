@@ -8,17 +8,19 @@ import Image from "next/image"
 
 const featuredProjects = [
   {
-    title: "AI Analytics Dashboard",
-    description: "Machine learning powered analytics with real-time insights",
-    image: "/placeholder.svg?height=200&width=300",
-    tech: ["React", "Python", "TensorFlow"],
+    title: "Sistema Municipal Villa Esperanza",
+    description: "Sistema de votación ciudadana para la administración pública.",
+    image: "/villaesperanza.png", // asegúrate que esté en /public
+    tech: ["Next.js", "Tailwind CSS", "Vercel"],
+    demo: "https://v0-simulated-budget-system.vercel.app"
   },
   {
-    title: "E-commerce Platform",
-    description: "Scalable microservices architecture with advanced features",
-    image: "/placeholder.svg?height=200&width=300",
-    tech: ["Next.js", "MongoDB", "Stripe"],
-  },
+    title: "Sistema Institucional ISIPP",
+    description: "Portal educativo para gestión académica y comunicación institucional.",
+    image: "/isipp.png", // poné esta imagen también en /public
+    tech: ["Next.js", "Tailwind CSS", "Vercel"],
+    demo: "https://isippweb.vercel.app" // reemplazalo si usás otro link
+  }
 ]
 
 export function ProjectsPreview() {
@@ -36,20 +38,23 @@ export function ProjectsPreview() {
             Featured Projects
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            A glimpse into my latest work combining cutting-edge technology with innovative design
+            Una muestra de mis proyectos más destacados en producción real.
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
           {featuredProjects.map((project, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               whileHover={{ y: -10 }}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700 group"
+              className="bg-gray-800/50 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700 group block"
             >
               <div className="relative overflow-hidden">
                 <Image
@@ -73,7 +78,7 @@ export function ProjectsPreview() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
 
@@ -90,7 +95,7 @@ export function ProjectsPreview() {
             className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 text-lg"
           >
             <Link href="/projects">
-              View All Projects
+              Ver Todos los Proyectos
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </Button>
