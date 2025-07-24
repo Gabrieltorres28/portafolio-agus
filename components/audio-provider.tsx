@@ -17,7 +17,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // Create audio element with a placeholder ambient track
-    audioRef.current = new Audio("/audio/ambient-background.mp3")
+    audioRef.current = new Audio("/public/mickit-sicilian-coffe-613(mp3cut).mp3")
     audioRef.current.loop = true
     audioRef.current.volume = 0.3
 
