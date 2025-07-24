@@ -11,27 +11,28 @@ interface AudioContextType {
 const AudioContext = createContext<AudioContextType | undefined>(undefined)
 
 export function AudioProvider({ children }: { children: React.ReactNode }) {
-  const [isPlaying, setIsPlaying] = useState(true) // que inicie activado
+  const [isPlaying, setIsPlaying] = useState(false)
   const audioRef = useRef<HTMLAudioElement | null>(null)
 
   useEffect(() => {
+    // Ruta correcta sin /public
     audioRef.current = new Audio("/mickit-sicilian-coffe-613(mp3cut).mp3")
     audioRef.current.loop = true
     audioRef.current.volume = 0.3
 
-    // Intentar reproducir automáticamente
-    const tryPlay = () => {
-      audioRef.current?.play().catch((err) => {
-        console.warn("Autoplay bloqueado por el navegador:", err)
-        setIsPlaying(false)
-      })
-    }
-
-    tryPlay()
+    // Intenta reproducir automáticamente
+    audioRef.current.play().then(() => {
+      setIsPlaying(true)
+    }).catch(() => {
+      // Algunos navegadores bloquean autoplay hasta que el usuario interactúa
+      setIsPlaying(false)
+    })
 
     return () => {
-      audioRef.current?.pause()
-      audioRef.current = null
+      if (audioRef.current) {
+        audioRef.current.pause()
+        audioRef.current = null
+      }
     }
   }, [])
 
@@ -39,14 +40,20 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause()
+        setIsPlaying(false)
       } else {
-        audioRef.current.play().catch(console.error)
+        audioRef.current.play().then(() => {
+          setIsPlaying(true)
+        }).catch(console.error)
       }
-      setIsPlaying(!isPlaying)
     }
   }
 
-  return <AudioContext.Provider value={{ isPlaying, toggleAudio }}>{children}</AudioContext.Provider>
+  return (
+    <AudioContext.Provider value={{ isPlaying, toggleAudio }}>
+      {children}
+    </AudioContext.Provider>
+  )
 }
 
 export function useAudio() {
