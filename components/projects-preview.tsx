@@ -8,17 +8,14 @@ import Image from "next/image"
 
 const featuredProjects = [
   {
-    title: "AI Analytics Dashboard",
-    description: "Machine learning powered analytics with real-time insights",
-    image: "/placeholder.svg?height=200&width=300",
-    tech: ["React", "Python", "TensorFlow"],
-  },
-  {
-    title: "E-commerce Platform",
-    description: "Scalable microservices architecture with advanced features",
-    image: "/placeholder.svg?height=200&width=300",
-    tech: ["Next.js", "MongoDB", "Stripe"],
-  },
+    title: "Sistema Municipal Villa Esperanza",
+    description:
+      "Un sistema que permite a los ciudadanos actuar de manera directa con votaciones para un mejor uso de los organismos estatales.",
+    image: "/villaesperanza.png", // Asegurate de tener esta imagen en /public
+    tech: ["Next.js", "Tailwind CSS", "Vercel"],
+    demo: "https://v0-simulated-budget-system.vercel.app", // ✅ Lo agregás si el botón lo usa
+    github: "" // opcional, si lo vas a mostrar
+  }
 ]
 
 export function ProjectsPreview() {
