@@ -47,7 +47,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-gray-300">Email</p>
-                    <p className="text-white font-medium">agustin.torres@email.com</p>
+                    <p className="text-white font-medium">agustinpiraywa@email.com</p>
                   </div>
                 </div>
 
@@ -57,7 +57,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-gray-300">Phone</p>
-                    <p className="text-white font-medium">+1 (555) 123-4567</p>
+                    <p className="text-white font-medium">+543751471708</p>
                   </div>
                 </div>
 
@@ -67,7 +67,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="text-gray-300">Location</p>
-                    <p className="text-white font-medium">Available Worldwide</p>
+                    <p className="text-white font-medium">Puerto Piray, Argentina</p>
                   </div>
                 </div>
               </div>
