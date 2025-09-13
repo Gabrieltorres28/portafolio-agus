@@ -1,65 +1,50 @@
-"use client"
+"use client";
+import { createContext, useContext, useEffect, useRef, useState } from "react";
 
-import type React from "react"
-import { createContext, useContext, useState, useRef, useEffect } from "react"
+type AudioCtx = {
+  isPlaying: boolean;
+  toggleAudio: () => Promise<void>;
+};
 
-interface AudioContextType {
-  isPlaying: boolean
-  toggleAudio: () => void
-}
-
-const AudioContext = createContext<AudioContextType | undefined>(undefined)
+const Ctx = createContext<AudioCtx | null>(null);
 
 export function AudioProvider({ children }: { children: React.ReactNode }) {
-  const [isPlaying, setIsPlaying] = useState(false)
-  const audioRef = useRef<HTMLAudioElement | null>(null)
+  const ref = useRef<HTMLAudioElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   useEffect(() => {
-    // Ruta correcta sin /public
-    audioRef.current = new Audio("/mickit-sicilian-coffe-613(mp3cut.net).mp3")
-    audioRef.current.loop = true
-    audioRef.current.volume = 0.3
+    const el = ref.current;
+    if (!el) return;
+    el.src = "/music/mixkit-sicilian-coffee-613(mp3cut.net).mp3";   // <-- poné tu archivo acá
+    el.loop = true;
+    el.preload = "auto";
+    el.muted = true;              // <-- clave para autoplay
+    el.play().then(() => setIsPlaying(true)).catch(() => setIsPlaying(false));
+  }, []);
 
-    // Intenta reproducir automáticamente
-    audioRef.current.play().then(() => {
-      setIsPlaying(true)
-    }).catch(() => {
-      // Algunos navegadores bloquean autoplay hasta que el usuario interactúa
-      setIsPlaying(false)
-    })
-
-    return () => {
-      if (audioRef.current) {
-        audioRef.current.pause()
-        audioRef.current = null
-      }
+  const toggleAudio = async () => {
+    const el = ref.current;
+    if (!el) return;
+    if (el.muted) el.muted = false;   // primer click: desmutea
+    if (el.paused) {
+      await el.play();
+      setIsPlaying(true);
+    } else {
+      el.pause();
+      setIsPlaying(false);
     }
-  }, [])
-
-  const toggleAudio = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause()
-        setIsPlaying(false)
-      } else {
-        audioRef.current.play().then(() => {
-          setIsPlaying(true)
-        }).catch(console.error)
-      }
-    }
-  }
+  };
 
   return (
-    <AudioContext.Provider value={{ isPlaying, toggleAudio }}>
+    <Ctx.Provider value={{ isPlaying, toggleAudio }}>
+      <audio ref={ref} playsInline />
       {children}
-    </AudioContext.Provider>
-  )
+    </Ctx.Provider>
+  );
 }
 
 export function useAudio() {
-  const context = useContext(AudioContext)
-  if (context === undefined) {
-    throw new Error("useAudio must be used within an AudioProvider")
-  }
-  return context
+  const ctx = useContext(Ctx);
+  if (!ctx) throw new Error("useAudio must be used inside <AudioProvider>");
+  return ctx;
 }
