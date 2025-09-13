@@ -61,7 +61,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-4">¿
                   <div className="bg-green-500/20 p-3 rounded-full">
                     <MapPin className="w-6 h-6 text-green-400" />
                   </div>

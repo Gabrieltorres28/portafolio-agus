@@ -16,7 +16,7 @@ export function AudioProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     // Ruta correcta sin /public
-    audioRef.current = new Audio("/mickit-sicilian-coffe-613(mp3cut).mp3")
+    audioRef.current = new Audio("/mickit-sicilian-coffe-613(mp3cut.net).mp3")
     audioRef.current.loop = true
     audioRef.current.volume = 0.3
 
