@@ -28,13 +28,7 @@ const featuredProjects = [
     tech: ["Next.js", "OpenAI", "Tailwind CSS"],
     demo: "https://ia-ai-flame.vercel.app"
   },
-  {
-    title: "SOMA ai ",
-    description: "IA con personalidad que analiza y responde sueños humanos.",
-    image: "/projectia.png",
-    tech: ["Next.js", "OpenAI", "Framer Motion"],
-    demo: "https://soma-ia.vercel.app"
-  },
+  
   {
     title: "Landing Empresarial Grúas Torres",
     description: "Sitio institucional para empresa de servicios industriales y rurales.",
