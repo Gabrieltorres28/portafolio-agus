@@ -40,7 +40,7 @@ const featuredProjects = [
     description: "Sitio institucional para empresa de servicios industriales y rurales.",
     image: "/logoatc.png",
     tech: ["Next.js", "Tailwind CSS", "Vercel"],
-    demo: "https://gruastorres.vercel.app"
+    demo: "https://https://gruastorres-oficial.vercel.app"
   }
 ]
 
