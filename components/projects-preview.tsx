@@ -19,7 +19,7 @@ const featuredProjects = [
     description: "Portal educativo para gestión académica y comunicación institucional.",
     image: "/isipp.png",
     tech: ["Next.js", "Tailwind CSS", "Vercel"],
-    demo: "https://isippweb.com.ar"
+    demo: "https://isipp.com.ar"
   },
   {
     title: "IA ANALISIS DEL COMPARTAMIENTO DE TUS IA'S",
