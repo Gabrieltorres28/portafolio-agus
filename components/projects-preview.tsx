@@ -15,7 +15,7 @@ const featuredProjects = [
     demo: "https://v0-simulated-budget-system.vercel.app"
   },
   {
-    title: "Sistema Institucional ISIPP",
+    title: "Web Institucional ISIPP",
     description: "Portal educativo para gestión académica y comunicación institucional. En producción real, utilizado por docentes, estudiantes y personal administrativo para acceder a recursos, gestionar cursos y comunicarse de manera eficiente.",
     image: "/isipp.png",
     tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
