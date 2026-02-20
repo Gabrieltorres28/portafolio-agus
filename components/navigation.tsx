@@ -61,7 +61,7 @@ export function Navigation() {
               size="sm"
               className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white bg-transparent"
             >
-              <a href="/CV_Gabriel_Torres_Actualizado.pdf" download>
+              <a href="/CV_AgustinTorres%20(2).pdf" download>
                 <Download className="w-4 h-4 mr-2" />
                 Download CV
               </a>
@@ -104,7 +104,7 @@ export function Navigation() {
                     size="sm"
                     className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white bg-transparent"
                   >
-                    <a href="/CV_Gabriel_Torres_Actualizado.pdf" download>
+                    <a href="/CV_AgustinTorres%20(2).pdf" download>
                       <Download className="w-4 h-4 mr-2" />
                       Download CV
                     </a>
