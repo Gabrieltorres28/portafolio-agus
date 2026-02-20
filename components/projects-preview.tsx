@@ -22,11 +22,11 @@ const featuredProjects = [
     demo: "https://isipp.com.ar"
   },
   {
-    title: "IA ANALISIS DEL COMPARTAMIENTO DE TUS IA'S",
-    description: "Sistema IA que interpreta el uso y potencial de la IA Generativa.",
-    image: "/projectia2.png",
-    tech: ["Next.js", "OpenAI", "Tailwind CSS"],
-    demo: "https://ia-ai-flame.vercel.app"
+     title: "Plataforma Web de Pedidos para Restaurante",
+  description: "Plataforma web que permite a los clientes visualizar el menú, añadir productos al carrito y enviar pedidos online. Diseñada para ofrecer una experiencia rápida, simple y funcional.",
+  image: "/acapulco.png",
+  tech: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
+  demo: "https://acapulco-burrito.vercel.app/"
   },
   
   {

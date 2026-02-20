@@ -51,7 +51,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
         >
-          25-year-old software developer with 5+ years of experience building web applications. Focused on scalable architecture, clean code, and production-ready systems.
+          25-years-old software developer with 5+ years of experience building web applications. Focused on scalable architecture, clean code, and production-ready systems.
         </motion.p>
 
         <motion.div
