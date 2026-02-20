@@ -11,11 +11,11 @@ type Step = number; // 0..8 (index de celda)
 const IDX = (r: number, c: number) => r * GRID + c;
 
 const FACTS = [
-  "🎓 Analista de Sistemas, foco en govtech municipal.",
-  "🛠️ Next.js · Tailwind · Prisma · Postgres.",
-  "🏛️ Proyectos: Presupuesto Participativo, Digesto Jurídico.",
-  "🎸 Músico: guitarra desde los 9, producción en FL Studio.",
-  "🚀 Busco impacto real para mi comunidad.",
+  "🎓 Analista de Sistemas, foco en desarrollo de software y base de datos.",
+  "🛠️ Next.js · Tailwind · Prisma · Postgres. Para un desarrollo mas complejo: visual studio-sqlserver c#.",
+  "🏛️ Proyectos: Software web insitucional, sistemas de gestion con WPF C#, y python.",
+  "🎸 Hobby: Toco guitarra desde los 9, produzco en FL Studio.",
+  "🚀 Busco impacto trabajar en equipo y crecer.",
 ];
 
 function randInt(n: number) { return Math.floor(Math.random() * n); }

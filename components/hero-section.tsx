@@ -77,7 +77,7 @@ export function HeroSection() {
   className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 text-lg bg-transparent"
 >
   <a
-    href="/CV_Gabriel_Torres_Analista_Sistemas.pdf"
+    href="/CV_Gabriel_Torres_Actualizado.pdf"
     target="_blank"
     rel="noopener noreferrer"
   >
