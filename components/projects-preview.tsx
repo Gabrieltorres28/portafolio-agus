@@ -109,7 +109,7 @@ export function ProjectsPreview() {
             size="lg"
             className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-3 text-lg"
           >
-            <Link href="/CV_AgustinTorres.pdf" target="_blank" rel="noopener noreferrer">
+            <Link href="/cv-agustin-torres.pdf" target="_blank" rel="noopener noreferrer">
               Ver CV
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
