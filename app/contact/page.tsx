@@ -76,9 +76,8 @@ export default function ContactPage() {
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
               <h3 className="text-2xl font-bold mb-4 text-green-400">Let's Build Something Amazing</h3>
               <p className="text-gray-300 leading-relaxed">
-                With 7+ years of experience in web development and 4 years in AI, I'm passionate about creating
-                innovative solutions that make a difference. Whether it's a complex web application or an AI-powered
-                system, I'm here to help bring your vision to reality.
+                Más de 5 años creando sitios y estudiando para estar siempre al dia con nuevas tecnologías, soy Analista de sistemas en computacion y sigo formándome como profesional. Me gustan los proyectos claros y bien hechos.
+                Si necesitas un producto listo para usar o mejorar el que ya tenés, hablemos y lo sacamos adelante.
               </p>
             </div>
           </motion.div>
