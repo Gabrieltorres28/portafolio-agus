@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ContactForm } from "@/components/contact-form"
 import { Mail, MapPin, Phone } from "lucide-react"
 
 export default function ContactPage() {
@@ -22,19 +21,11 @@ export default function ContactPage() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <ContactForm />
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
             className="space-y-8"
           >
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
@@ -76,7 +67,7 @@ export default function ContactPage() {
             <div className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-8 border border-gray-700">
               <h3 className="text-2xl font-bold mb-4 text-green-400">Let's Build Something Amazing</h3>
               <p className="text-gray-300 leading-relaxed">
-                Más de 5 años creando sitios y estudiando para estar siempre al dia con nuevas tecnologías, soy Analista de sistemas en computacion y sigo formándome como profesional. Me gustan los proyectos claros y bien hechos.
+                Más de 5 años creando y estudiando para estar siempre al dia con nuevas tecnologías, soy Analista de sistemas en computacion y sigo formándome como profesional. Me gustan los proyectos claros y bien hechos.
                 Si necesitas un producto listo para usar o mejorar el que ya tenés, hablemos y lo sacamos adelante.
               </p>
             </div>

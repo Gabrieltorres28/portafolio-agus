@@ -16,13 +16,29 @@ export function ContactForm() {
     subject: "",
     message: "",
   })
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log("Form submitted:", formData)
-    // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" })
+    setStatus("loading")
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+
+      if (!res.ok) {
+        throw new Error("No se pudo enviar")
+      }
+
+      setStatus("success")
+      setFormData({ name: "", email: "", subject: "", message: "" })
+    } catch (error) {
+      console.error(error)
+      setStatus("error")
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -110,11 +126,21 @@ export function ContactForm() {
         <Button
           type="submit"
           size="lg"
+          disabled={status === "loading"}
           className="w-full bg-gradient-to-r from-green-500 to-emerald-500 hover:from-green-600 hover:to-emerald-600 text-white"
         >
           <Send className="w-5 h-5 mr-2" />
-          Send Message
+          {status === "loading" ? "Enviando..." : "Enviar mensaje"}
         </Button>
+
+        {status === "success" && (
+          <p className="text-sm text-green-400 font-medium text-center">Mensaje enviado correctamente.</p>
+        )}
+        {status === "error" && (
+          <p className="text-sm text-red-400 font-medium text-center">
+            No se pudo enviar. Probá de nuevo en un momento.
+          </p>
+        )}
       </form>
     </motion.div>
   )
