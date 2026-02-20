@@ -30,11 +30,11 @@ export function HeroSection() {
         >
           <TypeAnimation
             sequence={[
-              "Senior Fullstack Developer",
+              "Fullstack Developer",
               2000,
-              "AI & Machine Learning Engineer",
+              "Database Management System (DBMS) Specialist",
               2000,
-              "Web Development Expert",
+              "Software Architecture & Design",
               2000,
               "Innovation Enthusiast",
               2000,
@@ -51,8 +51,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
         >
-          24 years old with 7+ years of experience crafting exceptional web experiences and 4 years pioneering AI
-          solutions. Passionate about turning complex problems into elegant, scalable solutions.
+          25-year-old software developer with 5+ years of experience building web applications. Focused on scalable architecture, clean code, and production-ready systems.
         </motion.p>
 
         <motion.div
