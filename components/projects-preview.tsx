@@ -11,21 +11,21 @@ const featuredProjects = [
     title: "Sistema Municipal Villa Esperanza",
     description: "Sistema de votación ciudadana para la administración pública.",
     image: "/villaesperanza.png",
-    tech: ["Next.js", "Tailwind CSS", "Vercel"],
+    tech: ["React", "Tailwind CSS", "Vercel"],
     demo: "https://v0-simulated-budget-system.vercel.app"
   },
   {
     title: "Sistema Institucional ISIPP",
-    description: "Portal educativo para gestión académica y comunicación institucional.",
+    description: "Portal educativo para gestión académica y comunicación institucional. En producción real, utilizado por docentes, estudiantes y personal administrativo para acceder a recursos, gestionar cursos y comunicarse de manera eficiente.",
     image: "/isipp.png",
-    tech: ["Next.js", "Tailwind CSS", "Vercel"],
+    tech: ["Next.js", "Tailwind CSS", "Framer Motion"],
     demo: "https://isipp.com.ar"
   },
   {
      title: "Plataforma Web de Pedidos para Restaurante",
   description: "Plataforma web que permite a los clientes visualizar el menú, añadir productos al carrito y enviar pedidos online. Diseñada para ofrecer una experiencia rápida, simple y funcional.",
   image: "/acapulco.png",
-  tech: ["Next.js", "Tailwind CSS", "TypeScript", "Vercel"],
+  tech: ["React", "Tailwind CSS", "TypeScript", "Vercel"],
   demo: "https://acapulco-burrito.vercel.app/"
   },
   
@@ -50,7 +50,7 @@ export function ProjectsPreview() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            Trabajando, focusing.
+            Trabajando.
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Una muestra de mis proyectos más destacados en producción real.
